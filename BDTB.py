@@ -15,7 +15,7 @@ def search():
     try:
         input=wait.until(EC.presence_of_element_located((By.CSS_SELECTOR,'#kwdselectid')))
         submit=wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR,'body > div.content > div > div.fltr.radius_5 > div > button')))
-        input.send_keys('python')
+        input.send_keys('爬虫')
         submit.click()
         total=wait.until(EC.presence_of_element_located((By.CSS_SELECTOR,'body > div.dw_wp > div.dw_page > div > div > div > span:nth-child(2)')))
         for item in get_products():
